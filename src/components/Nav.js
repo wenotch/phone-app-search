@@ -8,12 +8,10 @@ import {
 } from "@chakra-ui/react";
 
 export default function Nav() {
-  const bg = useColorModeValue("white", "gray.800");
-
   return (
     <>
       <chakra.header
-        bg={bg}
+        bg={useColorModeValue("white", "gray.800")}
         w="full"
         px={{ base: 2, sm: 4, md: 32 }}
         py={4}
