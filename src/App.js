@@ -81,7 +81,7 @@ function App() {
             spacing={0}
             placeItems="center"
           >
-            {iphone.map((phone) => {
+            {dataSearch.map((phone) => {
               return (
                 <EachCard
                   key={phone._id}

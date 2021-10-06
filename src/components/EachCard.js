@@ -6,11 +6,8 @@ import {
   Stack,
   Image,
 } from "@chakra-ui/react";
-import { useState } from "react";
 
 export default function EachCard({ name, imgUrl, price, storage, grade }) {
-  const [value, setValue] = useState("");
-  const handleChange = (event) => setValue(event.target.value);
   return (
     <Center py={5}>
       <Box
