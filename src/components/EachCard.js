@@ -2,22 +2,21 @@ import {
   Box,
   Center,
   useColorModeValue,
-  Heading,
   Text,
   Stack,
   Image,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
-const IMAGE =
-  "https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80";
-
-export default function EachCard({ name, imgUrl, price }) {
+export default function EachCard({ name, imgUrl, price, storage, grade }) {
+  const [value, setValue] = useState("");
+  const handleChange = (event) => setValue(event.target.value);
   return (
     <Center py={5}>
       <Box
         role={"group"}
         p={6}
-        w={"330px"}
+        w={"320px"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
         rounded={"lg"}
@@ -44,10 +43,10 @@ export default function EachCard({ name, imgUrl, price }) {
 
           <Stack direction={"row"} align={"center"}>
             <Text m="0" as="p" color={"gray.500"} fontSize={"sm"}>
-              Grade:
+              Grade: {grade}
             </Text>
             <Text m="0" as="p" color={"gray.500"} fontSize={"sm"}>
-              Storage Size: {}
+              Storage Size: {storage}
             </Text>
           </Stack>
           <Stack direction={"row"} align={"center"}>

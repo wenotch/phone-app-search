@@ -8,8 +8,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/image";
-import { InputGroup, InputLeftElement } from "@chakra-ui/input";
-import { SearchIcon } from "@chakra-ui/icons";
 import svg from "../images/search1.svg";
 
 const Hero = () => {
